@@ -1,0 +1,7 @@
+{
+  "chainSelectorName": "ethereum-testnet-sepolia",
+  "escrowAddress": "0x0000000000000000000000000000000000000000",
+  "gasLimit": "500000",
+  "gleifBaseUrl": "https://api.gleif.org/api/v1/lei-records",
+  "logConfidence": "LATEST"
+}
