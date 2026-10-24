@@ -1,0 +1,47 @@
+Initializing...
+Loading settings...
+! Using default private key for chain write simulation. To use your own key, set CRE_ETH_PRIVATE_KEY in your .env file or system environment.
+Checking RPC connectivity...
+Compiling workflow...
+✓ Workflow compiled
+✓ Simulation limits enabled
+  HTTP: req=120kb resp=250kb timeout=10s | ConfHTTP: req=125kb resp=500kb timeout=1m30s | Consensus obs=25kb | ChainWrite evm_report=50kb evm_gas=10000000 solana_report=265b solana_cu=300000 | WASM binary=100mb compressed=20mb
+  Binary hash: 8be69afc69b641aac32704a072de1c8103f1551a37ae058aefdb6e26148884fe
+  Config hash: d219604a063bfb9077bf7e1ca5467e91aa3449cb6d3fda90b12646110efe6dcd
+✓ Loaded JSON from file: /home/claude/lei/lei-gate/payloads/http-lapsed.json
+✓ Created HTTP trigger payload with 2 fields
+2026-10-24T10:25:08Z [SIMULATION] Simulator Initialized
+
+2026-10-24T10:25:08Z [SIMULATION] Running trigger trigger=http-trigger@1.0.0-alpha
+2026-10-24T10:25:08Z [USER LOG] HTTP trigger invoiceId=2 lei=7N0UJMJLXD0MDT5D5086
+2026-10-24T10:25:09Z [USER LOG] GLEIF 7N0UJMJLXD0MDT5D5086: found=true name="ENSCO PLC" entity=ACTIVE registration=LAPSED nextRenewal=2015-10-14T18:11:00Z jurisdiction=GB
+2026-10-24T10:25:09Z [USER LOG] Invoice 2: verified=false (registration.status=LAPSED; nextRenewalDate=2015-10-14T18:11:00Z not in the future)
+2026-10-24T10:25:09Z [USER LOG] writeReport txStatus=SUCCESS receiver=SUCCESS tx=-
+
+✓ Workflow Simulation Result:
+{
+  "entityStatus": "ACTIVE",
+  "invoiceId": "2",
+  "jurisdiction": "GB",
+  "legalName": "ENSCO PLC",
+  "lei": "7N0UJMJLXD0MDT5D5086",
+  "nextRenewalDate": "2015-10-14T18:11:00Z",
+  "reasons": [
+    "registration.status=LAPSED",
+    "nextRenewalDate=2015-10-14T18:11:00Z not in the future"
+  ],
+  "receiverStatus": "SUCCESS",
+  "registrationStatus": "LAPSED",
+  "txHash": "",
+  "txStatus": "SUCCESS",
+  "verified": false
+}
+
+2026-10-24T10:25:09Z [SIMULATION] Execution finished signal received
+2026-10-24T10:25:09Z [SIMULATION] Skipping WorkflowEngineV2
+
+╭──────────────────────────────────────────────────────╮
+│ Simulation complete! Ready to deploy your workflow?  │
+│                                                      │
+│ Run cre account access to request deployment access. │
+╰──────────────────────────────────────────────────────╯

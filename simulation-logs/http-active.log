@@ -1,0 +1,44 @@
+Initializing...
+Loading settings...
+! Using default private key for chain write simulation. To use your own key, set CRE_ETH_PRIVATE_KEY in your .env file or system environment.
+Checking RPC connectivity...
+Compiling workflow...
+✓ Workflow compiled
+✓ Simulation limits enabled
+  HTTP: req=120kb resp=250kb timeout=10s | ConfHTTP: req=125kb resp=500kb timeout=1m30s | Consensus obs=25kb | ChainWrite evm_report=50kb evm_gas=10000000 solana_report=265b solana_cu=300000 | WASM binary=100mb compressed=20mb
+  Binary hash: 8be69afc69b641aac32704a072de1c8103f1551a37ae058aefdb6e26148884fe
+  Config hash: d219604a063bfb9077bf7e1ca5467e91aa3449cb6d3fda90b12646110efe6dcd
+✓ Loaded JSON from file: /home/claude/lei/lei-gate/payloads/http-active.json
+✓ Created HTTP trigger payload with 2 fields
+2026-10-24T10:24:51Z [SIMULATION] Simulator Initialized
+
+2026-10-24T10:24:51Z [SIMULATION] Running trigger trigger=http-trigger@1.0.0-alpha
+2026-10-24T10:24:51Z [USER LOG] HTTP trigger invoiceId=1 lei=5493001KJTIIGC8Y1R12
+2026-10-24T10:24:52Z [USER LOG] GLEIF 5493001KJTIIGC8Y1R12: found=true name="Bloomberg Finance L.P." entity=ACTIVE registration=ISSUED nextRenewal=2027-01-25T16:50:02Z jurisdiction=US-DE
+2026-10-24T10:24:52Z [USER LOG] Invoice 1: verified=true
+2026-10-24T10:24:52Z [USER LOG] writeReport txStatus=SUCCESS receiver=SUCCESS tx=-
+
+✓ Workflow Simulation Result:
+{
+  "entityStatus": "ACTIVE",
+  "invoiceId": "1",
+  "jurisdiction": "US-DE",
+  "legalName": "Bloomberg Finance L.P.",
+  "lei": "5493001KJTIIGC8Y1R12",
+  "nextRenewalDate": "2027-01-25T16:50:02Z",
+  "reasons": [],
+  "receiverStatus": "SUCCESS",
+  "registrationStatus": "ISSUED",
+  "txHash": "",
+  "txStatus": "SUCCESS",
+  "verified": true
+}
+
+2026-10-24T10:24:52Z [SIMULATION] Execution finished signal received
+2026-10-24T10:24:52Z [SIMULATION] Skipping WorkflowEngineV2
+
+╭──────────────────────────────────────────────────────╮
+│ Simulation complete! Ready to deploy your workflow?  │
+│                                                      │
+│ Run cre account access to request deployment access. │
+╰──────────────────────────────────────────────────────╯
